@@ -105,7 +105,69 @@ class AvailabilitiesApi
         list($response) = $this->availabilitiesGetWithHttpInfo($provider_id, $service_id, $date);
         return $response;
     }
+    /**
+     * Operation availabilitiesGetWithHttpInfo
+     *
+     * Gets availability
+     *
+     * @param  int $provider_id (optional)
+     * @param  int $service_id (optional)
+     * @param  string $date (optional)
+     *
+     * @throws \EasyAppointmentsClient\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return JSON response, decoded
+     */
+    public function availabilitiesJson($provider_id = null, $service_id = null, $date = null)
+    {
+        $request = $this->availabilitiesGetRequest($provider_id, $service_id, $date);
 
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            $content = $responseBody->getContents();
+            $content = json_decode($content);
+            return $content;
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EasyAppointmentsClient\Model\Availabilities',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
     /**
      * Operation availabilitiesGetWithHttpInfo
      *
