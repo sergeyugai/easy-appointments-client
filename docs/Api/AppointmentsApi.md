@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **appointmentsGet**
-> object appointmentsGet($page, $length, $sort, $q, $aggregates)
+> \EasyAppointmentsClient\Model\Appointment[] appointmentsGet($page, $length, $sort, $q, $aggregates)
 
 Get all appointments
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Appointment[]**](../Model/Appointment.md)
 
 ### Authorization
 

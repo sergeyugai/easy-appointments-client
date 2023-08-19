@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **secretariesGet**
-> object secretariesGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Secretary[] secretariesGet($page, $length, $sort, $q)
 
 Get all secretaries
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Secretary[]**](../Model/Secretary.md)
 
 ### Authorization
 

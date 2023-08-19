@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **unavailabilitiesGet**
-> object unavailabilitiesGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Unavailability[] unavailabilitiesGet($page, $length, $sort, $q)
 
 Get all unavailabilities
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Unavailability[]**](../Model/Unavailability.md)
 
 ### Authorization
 

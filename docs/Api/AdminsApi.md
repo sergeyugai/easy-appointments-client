@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **adminsGet**
-> object adminsGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Admin[] adminsGet($page, $length, $sort, $q)
 
 Get all admins
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Admin[]**](../Model/Admin.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ $apiInstance = new EasyAppointmentsClient\Api\AdminsApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \stdClass; // object | 
+$body = array(new \EasyAppointmentsClient\Model\Admin()); // \EasyAppointmentsClient\Model\Admin[] | 
 
 try {
     $result = $apiInstance->adminsPost($body);
@@ -237,7 +237,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **object**|  | [optional]
+ **body** | [**\EasyAppointmentsClient\Model\Admin[]**](../Model/Admin.md)|  | [optional]
 
 ### Return type
 

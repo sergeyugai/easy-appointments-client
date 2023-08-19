@@ -155,7 +155,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **categoriesGet**
-> object categoriesGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Category[] categoriesGet($page, $length, $sort, $q)
 
 Get all categories
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Category[]**](../Model/Category.md)
 
 ### Authorization
 

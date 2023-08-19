@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **settingsGet**
-> object settingsGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Setting[] settingsGet($page, $length, $sort, $q)
 
 Get all settings
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Setting[]**](../Model/Setting.md)
 
 ### Authorization
 

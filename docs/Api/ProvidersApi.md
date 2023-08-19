@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **providersGet**
-> object providersGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Provider[] providersGet($page, $length, $sort, $q)
 
 Get all providers
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Provider[]**](../Model/Provider.md)
 
 ### Authorization
 

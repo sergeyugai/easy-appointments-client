@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **servicesGet**
-> object servicesGet($page, $length, $sort, $q)
+> \EasyAppointmentsClient\Model\Service[] servicesGet($page, $length, $sort, $q)
 
 Get all services
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**\EasyAppointmentsClient\Model\Service[]**](../Model/Service.md)
 
 ### Authorization
 
